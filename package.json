@@ -1,0 +1,17 @@
+{
+  "name": "predict-elasticsearch",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "mongodb": "~1.4.22",
+    "bluebird": "~2.3.11",
+    "lodash": "~2.4.1",
+    "elasticsearch": "~3.0.0"
+  }
+}

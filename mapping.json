@@ -1,0 +1,95 @@
+POST /predict/_mapping/person
+{
+      "properties": {
+      "addressId": { "type": "integer" },
+      "ageGroup": { "type": "string", "index": "not_analyzed" },
+      "beehive": { "type": "integer" },
+      "dns": { "type": "boolean" },
+      "dateOfBirth": { "type": "date" },
+      "heatlhSystemEmployee": { "type": "boolean" },
+      "financialClassId": { "type": "integer" },
+      "gender": { "type": "string", "index": "not_analyzed" },
+      "holdout": { "type": "boolean" },
+      "homeValue": { "type": "string", "index": "not_analyzed" },
+      "householdPreference": { "type": "integer" },
+      "income": { "type": "string", "index": "not_analyzed" },
+      "hasAddress": { "type": "boolean" },
+      "homeOwnership": { "type": "string", "index": "not_analyzed" },
+      "languageId": { "type": "integer" },
+      "lists": {
+        "type": "nested",
+        "properties": {
+          "lid": { "type": "string", "index": "not_analyzed" },
+          "seg": { "type": "integer" }
+        }
+      },
+      "maritalStatus": { "type": "string", "index": "not_analyzed" },
+      "donateToCharity": { "type": "boolean" },
+      "occupation": { "type": "integer" },
+      "hasPrimaryPhysician": { "type": "boolean" },
+      "hasChildren": { "type": "boolean" },
+      "payerType": { "type": "string", "index": "not_analyzed" },
+      "race": { "type": "string", "index": "not_analyzed" },
+      "religion": { "type": "string", "index": "not_analyzed" },
+      "recipes": {
+        "type": "nested",
+        "properties": {
+          "id": { "type": "integer" },
+          "score": { "type": "integer" }
+        }
+      },
+      "sup": {
+        "type": "object",
+        "properties": {
+          "street1": { "type": "string" },
+          "street2": { "type": "string" },
+          "city": { "type": "string" },
+          "crrt": { "type": "string", "index": "not_analyzed" },
+          "dpbc": { "type": "integer" },
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "purl": { "type": "string", "index": "not_analyzed" },
+          "state": { "type": "string", "index": "not_analyzed" }
+        }
+      },
+      "personTypeId": { "type": "string" },
+      "educationId": { "type": "integer" },
+      "householdType": { "type": "string", "index": "not_analyzed" },
+      "wealthRate": { "type": "integer" },
+      "location": {
+        "type": "geo_point",
+        "fielddata": {
+          "format": "compressed",
+          "precision": "3m"
+        }
+      },
+      "hasEmail": { "type": "boolean" },
+      "zip": { "type": "string" },
+      "zip4": { "type": "string" },
+      "mfl": {
+        "type": "nested",
+        "properties": {
+          "locationId": { "type": "string", "index": "not_analyzed" },
+          "meters": { "type": "float" }
+        }
+      },
+      "encounters": {
+        "type": "nested",
+        "properties": {
+          "admittedAt": { "type": "date" },
+          "dischargedAt": { "type": "date" },
+          "er": { "type": "boolean" },
+          "locationId": { "type": "integer" },
+          "mxGroupIds": { "type": "integer" },
+          "providers": {
+            "type": "nested",
+            "properties": {
+              "id": { "type": "integer" },
+              "type": { "type": "integer" }
+            }
+          },
+          "patientType": { "type": "string" }
+        }
+      }
+    }
+}
