@@ -53,7 +53,7 @@ module.exports = function(person) {
     educationId: person['u'],
     householdType: person['v'],
     wealthRate: person['w'],
-    location: person['x'].coordinates.join(','),//map point lat/lon
+    location: person['x'].coordinates.map(Number),//map point lat/lon
     hasEmail: person['y'],
     zip: person['z'],
     zip4: person['z4'],
