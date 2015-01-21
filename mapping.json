@@ -1,4 +1,4 @@
-POST /predict/_mapping/person
+POST /southeast/_mapping/person
 {  
    "person":{  
       "properties":{  
