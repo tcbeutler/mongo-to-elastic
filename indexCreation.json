@@ -1,0 +1,7 @@
+POST /southeast
+{
+  "settings": {
+    "index.store.type": "memory",
+    "index.cache.query.enable": true
+  }
+}
